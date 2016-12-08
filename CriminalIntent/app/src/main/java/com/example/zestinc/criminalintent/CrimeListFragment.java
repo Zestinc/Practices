@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class CrimeListFragment extends ListFragment {
     private static final String TAG = "CrimeListFragment";
@@ -117,6 +118,8 @@ public class CrimeListFragment extends ListFragment {
                 Crime crime = new Crime();
                 CrimeLab.get(getActivity()).addCrime(crime);
                 Intent intent = new Intent(getActivity(), CrimePagerActivity.class);
+                UUID id = crime.getmId();
+                intent.putExtra(CrimeFragment.EXTRA_CRIME_ID, crime.getmId());
                 startActivityForResult(intent, 0);
                 return true;
             case R.id.menu_item_show_subtitle:
