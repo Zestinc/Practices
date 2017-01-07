@@ -8,9 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-/**
- * Created by zestinc on 2017/1/4.
- */
 
 public class ImageFragment extends DialogFragment {
     public static final String EXTRA_IMAGE_PATH =
