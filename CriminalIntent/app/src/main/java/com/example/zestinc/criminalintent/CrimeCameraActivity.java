@@ -7,6 +7,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 public class CrimeCameraActivity extends SingleFragmentActivity {
+
     @Override
     public void onCreate(Bundle savedInstaceState) {
         // Hide the window title

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <!--确保配备相机的设备才能在Google Play上下载使用这个app-->
     <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:allowBackup="true"
