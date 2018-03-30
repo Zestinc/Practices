@@ -1,6 +1,7 @@
 package com.example.zestinc.zestinclauncher;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -35,8 +36,16 @@ public class MainActivity extends Activity {
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
-                Toast.makeText(MainActivity.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
+                ResolveInfo info = mApps.get(position);
+                //该应用的包名  
+                String pkg = info.activityInfo.packageName;
+                //应用的主activity类
+                String cls = info.activityInfo.name;
+                ComponentName component = new ComponentName(pkg, cls);
+
+                Intent intent = new Intent();
+                intent.setComponent(component);
+                startActivity(intent);
             }
         });
     }
