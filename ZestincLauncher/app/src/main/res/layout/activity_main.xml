@@ -5,10 +5,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.zestinc.zestinclauncher.MainActivity">
 
-    <GridView android:layout_width="match_parent"
-        android:id="@+id/apps_list"
-        android:numColumns="4"
-        android:layout_height="wrap_content">
-    </GridView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:divider="#ffff0000"
+        android:dividerHeight="10dp">
+
+    </android.support.v7.widget.RecyclerView>
 
 </RelativeLayout>
