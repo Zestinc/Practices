@@ -15,6 +15,7 @@ import android.view.View;
 /**
  *
  * @author zhy
+ * Grid Item Divider
  *
  */
 public class DividerGridItemDecoration extends RecyclerView.ItemDecoration
